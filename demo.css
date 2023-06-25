@@ -1,0 +1,149 @@
+/* ----------------------------
+BROWSER RESET -----------------
+---------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	text-decoration:none;
+}
+
+*:focus {
+	outline: 0;
+}
+
+*::selection {
+	background-color: #d85757;
+	color: #fff;
+}
+
+*::-moz-selection {
+	background-color: #d85757;
+	color: #fff;
+}
+
+/* ----------------------------
+STANDARD TAGS REDECLARATION ---
+---------------------------- */
+
+body {
+	background: #f8f8f8 url('bgLight.jpg') repeat scroll top left;
+	color: #5d5d5d;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+a {
+	color: #303030;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #909090;
+}
+
+/* ----------------------------
+LAYOUT CLASSES ----------------
+---------------------------- */
+
+.oWrap {
+	position: relative;
+}
+
+.iWrap {
+	margin: 0px auto;
+	position: relative;
+	width: 800px;
+}
+
+.center {
+	text-align: center;
+}
+
+.bonus {
+	margin-top: 100px;
+}
+
+.clear {
+	clear: both;
+}
+
+/* ----------------------------
+LAYOUT ------------------------
+---------------------------- */
+
+#header {
+	background: #272a39 url('bgDark.jpg') repeat scroll top left;
+	border-bottom: 1px solid #fff;
+	margin-top: -1px;
+	color: #fff;
+}
+
+#header .iWrap {
+	padding: 20px 0px;
+}
+
+#header .iWrap h1 {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+#header .iWrap p {
+	color: #d8d8d8;
+	font-size: 11px;
+	line-height: 15px;
+}
+
+#header .iWrap p em {
+	color: #efefef;
+}
+
+#content {
+	padding: 20px 0px;
+}
+
+#footer .iWrap p {
+	color: #777;
+	font-size: 11px;
+	text-align: center;
+	text-shadow: 0px 1px 0px #fff;
+	padding-bottom: 20px;
+}
+
+#switcher {
+	background-color: #fff;
+	bottom: 20px;
+	color: #d83e33;
+	display: inline-block;
+	height: 34px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 34px;
+	padding: 0px 16px;
+	position: fixed;
+	right: 20px;
+	text-transform: uppercase;
+	
+	box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+	
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+}
+
+#switcher:hover {
+	background-color: #d83e33;
+	color: #fff;
+}
+
+.downloadBtn, .btn {
+	margin: 20px 25px;
+}

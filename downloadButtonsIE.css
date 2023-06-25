@@ -1,0 +1,18 @@
+.downloadBtn {
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(startColorStr='#FDFDFD', endColorStr='#EDEDED');
+	-ms-filter: "PROGID:DXImageTransform.Microsoft.Gradient(startColorStr='#FDFDFD', endColorStr='#EDEDED')";
+	
+	outline: 1px solid #e0e0e0;
+}
+
+.downloadBtn:hover {
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#F0F0F0');
+	-ms-filter: "PROGID:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#F0F0F0')";
+}
+
+.downloadBtn:active, .downloadBtn:focus {
+	top: 1px;
+
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(startColorStr='#EDEDED', endColorStr='#FDFDFD');
+	-ms-filter: "PROGID:DXImageTransform.Microsoft.Gradient(startColorStr='#EDEDED', endColorStr='#FDFDFD')";
+}

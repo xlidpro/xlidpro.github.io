@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>网易云音乐解析 - 在线工具箱</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="./wyybox/layui.css" media="all">
+  <style>
+  .navbar header .title,.navbar header .title a {
+		text-align:center;
+		padding:30px;
+		font-weight:bold;
+		font-size:38px;
+	}
+	body{
+		margin-left:10%;/*居中一点点*/
+		margin-right:10%;
+		font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+	}
+</style>
+<style type="text/css">._th-container ._th-item{margin-bottom:3px;position:relative;width:0;height:0;cursor:pointer;opacity:.3;background-color:aquamarine;border-radius:100%;text-align:center;line-height:30px;-webkit-transition:all .35s;-o-transition:all .35s;transition:all .35s;right:30px}._th-container ._th-item,._th-container ._th-click-hover,._th_cover-all-show-times ._th_times{-webkit-box-shadow:-3px 4px 12px -5px black;box-shadow:-3px 4px 12px -5px black}._th-container:hover ._th-item._item-x2{margin-left:18px;width:40px;height:40px;line-height:40px}._th-container:hover ._th-item._item-x-2{margin-left:17px;width:38px;height:38px;line-height:38px}._th-container:hover ._th-item._item-xx2{width:36px;height:36px;margin-left:16px;line-height:36px}._th-container:hover ._th-item._item-xx-2{width:32px;height:32px;line-height:32px;margin-left:14px}._th-container:hover ._th-item._item-reset{width:30px;line-height:30px;height:30px;margin-left:10px}._th-click-hover{position:relative;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;height:45px;width:45px;cursor:pointer;opacity:.3;border-radius:100%;background-color:aquamarine;text-align:center;line-height:45px;right:0}._th-container:hover{left:-5px}._th-container{font-size:12px;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;left:-35px;top:20%;position:fixed;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:100000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}._th-container ._th-item:hover{opacity:.8;background-color:#5fb492;color:aliceblue}._th-container ._th-item:active{opacity:.9;background-color:#1b3a26;color:aliceblue}._th-container:hover ._th-click-hover{opacity:.8}._th-container:hover ._th-item{opacity:.6;right:0}._th-container ._th-click-hover:hover{opacity:.8;background-color:#5fb492;color:aliceblue}._th_cover-all-show-times{position:fixed;top:0;right:0;width:100%;height:100%;z-index:99999;opacity:1;font-weight:900;font-size:30px;color:#4f4f4f;background-color:rgba(0,0,0,0.1)}._th_cover-all-show-times._th_hidden{z-index:-99999;opacity:0;-webkit-transition:1s all;-o-transition:1s all;transition:1s all}._th_cover-all-show-times ._th_times{width:300px;height:300px;border-radius:50%;background-color:rgba(127,255,212,0.51);text-align:center;line-height:300px;position:absolute;top:50%;right:50%;margin-top:-150px;margin-right:-150px}</style><link id="layuicss-layer" rel="stylesheet" href="./网易云音乐解析 - 在线工具箱_files/layer.css" media="all"></head>
+<body>
+<div class="navbar">
+				<header>
+				<h1 class="title"><a href="http://tool.qqjsz.cn/" class="nuxt-link-exact-active nuxt-link-active">
+				在线工具箱</a><i class="eva eva-moon-outline"></i></h1>
+				</header>
+</div>
+
+<fieldset class="layui-elem-field" style="">
+  <legend style="font-size:25px;font-weight:bold;">网易云音乐解析</legend>
+  <div style="width: 100%;" class="layui-field-box layui-form-item layui-inline">
+	<div class="layui-input-inline" style="width: 90%;margin-left: 0px;">
+			<input type="text" id="link" placeholder="https://music.163.com/song?id=1423123512" autocomplete="off" class="layui-input">
+	 </div>
+  </div>
+</fieldset>
+<fieldset id="jieguoDiv" class="layui-elem-field" style="font-size:20px;display:none;padding:1rem 2rem 1.5rem;">
+  <legend style="font-size:25px;font-weight:bold;">解析成功</legend>
+  
+</fieldset>
+ <fieldset class="layui-elem-field" style="">
+  <legend style="font-size:25px;font-weight:bold;">使用说明</legend>
+		<div class="layui-field-box">
+			<br><span class="layui-badge-dot layui-bg-black"></span> 上方输入想要解析的网易云音乐链接
+			<br><br><span class="layui-badge-dot layui-bg-black"></span> 等待解析完毕后点击链接即可进行下载
+			<br><br><span class="layui-badge-dot layui-bg-black"></span> 如果输入后没响应则是粘贴的链接有问题
+			<br><br>
+		</div>
+</fieldset>
+<script src="./wyybox/layui.js"></script>
+
+<script>
+layui.use(['jquery','layer'], function(){
+  var $ = layui.jquery;
+  var layer = layui.layer;
+$("#link").bind("input propertychange", function(h) {
+   	var link = $.trim($("#link").val());
+	if (link == "") {
+		$("#jieguoDiv").hide();
+		return
+	}else if(link.indexOf("http") == -1 || link.indexOf("music.163.com") == -1){
+	   layer.tips('请输入正确的网易云音乐链接', '#link',{tips:3});
+		$("#jieguoDiv").hide();
+		return
+	}
+	const regex = /song\?id=(.*?)&/i;
+    var str = regex.exec(link + "&");
+    if(str == null){
+	const regex = /song\/(.*?)\//i;
+    var str = regex.exec(link);
+     console.log(str); 
+    }
+    $("#jieguoDiv").append('<a style="color:#ff0f0f;" download="' +  str[1] +'.mp3" href="https://music.163.com/song/media/outer/url?id=' + str[1] + '">https://music.163.com/song/media/outer/url?id=' +  str[1]  + '</a>');
+     $("#jieguoDiv").show();
+});
+
+});
+</script>
+<div style="display:none">
+	<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278860223'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1278860223%26online%3D1' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1278860223"></span><script src="./网易云音乐解析 - 在线工具箱_files/z_stat.php" type="text/javascript"></script>
+</div>
+
+<div><div class="_th-container">
+    <div class="_th-click-hover _item-input">
+        x1.00
+    </div>
+    <div class="_th-item _item-x2">&gt;</div>
+    <div class="_th-item _item-x-2">&lt;</div>
+    <div class="_th-item _item-xx2">&gt;&gt;</div>
+    <div class="_th-item _item-xx-2">&lt;&lt;</div>
+    <div class="_th-item _item-reset">O</div>
+</div>
+<div class="_th_cover-all-show-times _th_hidden">
+    <div class="_th_times">x1.00</div>
+</div></div></body></html>

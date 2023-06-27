@@ -1,27 +1,64 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>隐藏代码</title>
- </head>
- <body>
-  <script type="text/javascript">
-//测试
-	function checkUser(){
-		var username=document.getElementById("uname");
-		var username=document.getElementById("uname");
-		if(uname.value=="乐可"){
-				location.href="https://alanshitadmin.lanzouk.com/imaOa10j0ukb";
-		}else{
-			alert("输入错误");
-		}
-	}
-  </script>
-输入代码：<input type="text" id="uname" name="uname"style="width:200px; height:50px;font-size:40px"/><br/>
-  <input type="button" id="btnSubmit" οnclick="checkUser()" value="确认" style="width:200px; height:100px;font-size:80px"/>
-</body>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>验证账户</title>
+	</head>
+	<body>
+		<div>
+			<span>用户名:</span>
+			<input type="text" placeholder="请输入用户名..." id="username">
+			<span>密码:</span>
+			<input type="password" placeholder="请输入用户名..." id="passwd">
+			<input type="button" value="登录" onclick="login()">
+			<input type="button" id="btnClear" value="清除" onclick="doClear()" />
+		</div>
+		<script type="text/javascript">
+			let accountAll = [{ // 存储账户json数据的数组
+					username: 乐老师,
+					passwd: 'lls'
+				},
+				{
+					username: 乐可,
+					passwd: 'lk'
+				},
+				{
+					username: 乐可肉文,
+					passwd: 'lkrw'
+				}
+			]
+			function login() { //登陆判断
+				let username = document.getElementById('username').value;
+				let passwd = document.getElementById('passwd').value;
+				let account = accountAll.filter(function(e) {
+					return e.username == username
+				})[0]; // 筛选账号返回数组，不存在则返回空数组
+				if (!account) {
+					alert('账户不存在');
+				} else {
+					if (account.username == username && account.passwd == passwd) {
+						alert('登陆成功');
+						window.navigate("https://alanshitadmin.lanzouk.com/imaOa10j0ukb");
+					} else {
+						alert('密码错误');
+					}
+				}
+			}
+			function doClear() { //获取页面所有的input框，是text和password框，内容=空串
+				let inputs = document.getElementsByTagName("input");
+				for (let i = 0; i < inputs.length; i++) {
+					if (inputs[i].type == 'text' || inputs[i].type == 'password') {
+						inputs[i].value = '';
+					}
+				}
+			}
+			//给清除按钮增加onclick事件
+			let btnClear = document.getElementById('btnClear');
+			btnClear.addEventListener('click', function() {
+				doClear();
+			});
+		</script>
+	</body>
 </html>

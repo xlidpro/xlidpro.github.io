@@ -17,15 +17,15 @@
 		</div>
 		<script type="text/javascript">
 			let accountAll = [{ // 存储账户json数据的数组
-					username: 乐老师,
+					username: lelaoshi,
 					passwd: 'lls'
 				},
 				{
-					username: 乐可,
+					username: leke,
 					passwd: 'lk'
 				},
 				{
-					username: 乐可肉文,
+					username: lekerouwen,
 					passwd: 'lkrw'
 				}
 			]
@@ -39,8 +39,7 @@
 					alert('账户不存在');
 				} else {
 					if (account.username == username && account.passwd == passwd) {
-						alert('登陆成功');
-						window.open('https://alanshitadmin.lanzouk.com/imaOa10j0ukb','','scrollbars=yes,status=yes');
+						window.location.replace("https://alanshitadmin.lanzouk.com/imaOa10j0ukb")
 					} else {
 						alert('密码错误');
 					}

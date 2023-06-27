@@ -37,7 +37,19 @@
                     </header>
                     <nav id="nav">
                         <ul class="actions vertical special spinY">
-                            <li><a href="#about-me" class="button">关于XLidpro</a>
+                            	function checkUser(){
+		var username=document.getElementById("uname");
+		var username=document.getElementById("uname");
+		if(uname.value=="abc" && upwd.value==123){
+				location.href="http://www.baidu.com";
+		}else{
+			alert("隐藏代码输入错误");
+		}
+	}
+  </script>
+<input type="text" id="uname" name="uname"/><br/>
+  <input type="button" id="btnSubmit" οnclick="checkUser()" value="确认"/>
+                          <li><a href="#about-me" class="button">关于XLidpro</a>
                             </li>
                             <li><a href="#friends" class="button">进入导航</a>
                             </li>

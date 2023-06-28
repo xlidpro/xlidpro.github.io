@@ -23,7 +23,7 @@ $(function(){
     var musicNameData = ['HIP','NYA!!!','桜樹街道','望影の方舟Six','Igallta','Polaroid','アイドル(Idol)'];                   // 歌曲名数组
     var artistNameData = ['MAMAMOO (마마무)','FLuoRiTe','Kozato Snow','Se-U-Ra','Se-U-Ra','Jonas Blue / Liam Payne / Lennon Stella','YOASOBI']            // 创作歌手数组
     var musicImgsData = []    // 图片地址数组
-    var musicUrls=['mp3/music1.mp3','mp3/music2.mp3','mp3/music3.mp3','mp3/music4.mp3','mp3/music5.mp3','mp3/music6.mp3'];// 歌曲mp3数组
+    var musicUrls=['mp3/music1.mp3','mp3/music2.mp3','mp3/music3.mp3','mp3/music4.mp3','mp3/music5.mp3','mp3/music6.mp3','mp3/music7.mp3'];// 歌曲mp3数组
     var currIndex = -1;              // 当前播放索引
     
     var buffInterval = null          // 初始化定时器 判断是否需要缓冲

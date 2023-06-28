@@ -20,9 +20,9 @@ $(function(){
     
     // 一些计算所需的变量
     var seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0
-    var musicNameData = ['HIP','NYA!!!','桜樹街道','望影の方舟Six','Igallta','Polaroid'];                   // 歌曲名数组
-    var artistNameData = ['MAMAMOO (마마무)','FLuoRiTe','Kozato Snow','Se-U-Ra','Se-U-Ra','Jonas Blue / Liam Payne / Lennon Stella']            // 创作歌手数组
-    var musicImgsData = ['img/bg.jpg','img/bg1.jpg','img/bg2.jpg']    // 图片地址数组
+    var musicNameData = ['HIP','NYA!!!','桜樹街道','望影の方舟Six','Igallta','Polaroid','アイドル(Idol)'];                   // 歌曲名数组
+    var artistNameData = ['MAMAMOO (마마무)','FLuoRiTe','Kozato Snow','Se-U-Ra','Se-U-Ra','Jonas Blue / Liam Payne / Lennon Stella','YOASOBI']            // 创作歌手数组
+    var musicImgsData = []    // 图片地址数组
     var musicUrls=['mp3/music1.mp3','mp3/music2.mp3','mp3/music3.mp3','mp3/music4.mp3','mp3/music5.mp3','mp3/music6.mp3'];// 歌曲mp3数组
     var currIndex = -1;              // 当前播放索引
     
